@@ -8,8 +8,6 @@ module.exports.addProductPage = async(req,res)=>{
         let Category = await category.find({});
         let Subcategory = await subCategory.find({})
         let ExtraSubcategory = await extraSubCategory.find({})
-        console.log(ExtraSubcategory);
-        
         res.render('./pages/addProducts',{
             Category,Subcategory,ExtraSubcategory
         })

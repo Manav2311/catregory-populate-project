@@ -73,13 +73,13 @@
               <div class="form-group row">
                 <label
                   class="col-sm-3 text-end control-label col-form-label"
-                  >Brands  </label
+                  >brands</label
                 >
                 <div class="col-sm-9">
                   <select class="form-control" name="extraSubCategoryId">
                     <option value="" disabled selected>--select category--</option>
                     <% ExtraSubcategory.map((value)=>{ %>
-                        <option value="<%= value.id %>"><%= value.extraSubCategoryTitle %></option>
+                        <option value="<%= value.id %>"><%= value.exterSubCategoryTitle %></option>
                     <% }) %>
                   </select>
                 </div>
@@ -168,3 +168,4 @@
   </div>
 
   <%- include('../partials/footer') %>
+</div>

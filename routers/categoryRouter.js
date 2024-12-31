@@ -1,8 +1,10 @@
 const { Router } = require("express");
 const categoryCtrl = require('../controllers/categoryControllers');
 const uploadImage = require("../middlewares/uploadImage");
+const passport = require("passport");
 
 const CategoryRouter = Router();
+CategoryRouter.use(passport.userPassportAuth)
 CategoryRouter.get('/addcategories',categoryCtrl.addCtegoryPage)
 CategoryRouter.post('/addcategories',uploadImage,categoryCtrl.addCategory)
 CategoryRouter.get('/viewcategories',categoryCtrl.viewCategoriesPage)
